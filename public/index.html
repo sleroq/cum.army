@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>cum</title>
+  </head>
+  <body>
+    <div class="bg">
+      <img
+        src="gifs/1.gif"
+        alt="cum animation"
+        class="main-gif"
+        id="randomGif"
+      />
+
+      <div class="footer-content">
+        <div class="contact">
+          <a href="mailto:sleroq@cum.army">sleroq@cum.army</a>
+          <a href="https://matrix.to/#/@sleroq:sleroq.link">@sleroq:sleroq.link</a>
+          <a href="https://t.me/sleroq">t.me/sleroq</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const gifList = [
+        "1.gif",
+        "2.gif",
+      ];
+
+      const gifImage = document.getElementById("randomGif");
+
+      function setRandomGif() {
+        if (gifList.length === 0) {
+          console.warn(
+            "GIF list is empty. Fallback GIF will remain.",
+          );
+          return;
+        }
+        const randomIndex = Math.floor(Math.random() * gifList.length);
+        const randomGifSrc = gifList[randomIndex];
+        if (gifImage) {
+          gifImage.src = "gifs/" + randomGifSrc;
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setRandomGif);
+      } else {
+        setRandomGif();
+      }
+    </script>
+  </body>
+</html>

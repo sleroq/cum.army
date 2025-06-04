@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  background-image: url("https://media.quietplace.xyz/files/ad4a58fd-9ae1-4a44-9453-3fd85e690cba.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.main-gif {
+  display: block;
+  width: 60vw;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.footer-content {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Comfortaa", cursive;
+}
+
+.contact {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+a {
+  color: hotpink;
+  text-decoration: none;
+}
